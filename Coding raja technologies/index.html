@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Resume Builder</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="resumeForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                        <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" pattern="^\d{10}$" required>
+                        <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" class="form-control" required>
+                        <div class="invalid-feedback">Please enter your address.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Professional Summary:</label>
+                        <textarea id="summary" name="summary" class="form-control" required></textarea>
+                        <div class="invalid-feedback">Please enter a professional summary.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">Skills:</label>
+                        <textarea id="skills" name="skills" class="form-control" required></textarea>
+                        <div class="invalid-feedback">Please enter your skills.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Education:</label>
+                        <textarea id="education" name="education" class="form-control" required></textarea>
+                        <div class="invalid-feedback">Please enter your education details.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="workExperience">Work Experience:</label>
+                        <textarea id="workExperience" name="workExperience" class="form-control" required></textarea>
+                        <div class="invalid-feedback">Please enter your work experience.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="projects">Projects:</label>
+                        <textarea id="projects" name="projects" class="form-control" required></textarea>
+                        <div class="invalid-feedback">Please enter your projects.</div>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="generatePreview()">Preview</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2 class="my-4">Preview</h2>
+                <div id="preview" class="border p-3"></div>
+                <button class="btn btn-success mt-3" onclick="downloadResume()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
