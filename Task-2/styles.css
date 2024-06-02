@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.player img {
+    max-width: 1000px;
+    max-height: 1500px;
+}
+
+.progress {
+    width: 100%;
+}
+
+.controls button {
+    margin: 0 5px;
+}
+
+button.btn.btn-secondary {
+    margin-top: 10px;
+}
